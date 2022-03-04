@@ -1,0 +1,7 @@
+00b35c : VERT
+
+5581b2 : BLEU
+
+fffe04 : JAUNE
+
+d53b23 : ROUGE
