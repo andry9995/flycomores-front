@@ -1059,3 +1059,5 @@ $( document ).ready(function() {});
 $(document).on('click','a.frame-close', function(e){
   $('.header-preview').slideUp();
 });
+
+$('.select2').select2();
