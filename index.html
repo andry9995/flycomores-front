@@ -327,12 +327,15 @@
                             v-model="date"
                             @input="input"
                             :available-dates="datesDepartureAvailable" 
+                            scrollable
+                            :popover="{ visibility: 'click' }"
                     >
                     </v-date-picker>
 
                     <v-date-picker
                             @input="input"
                             :available-dates="datesReturnAvailable" 
+                            :popover="{ visibility: 'click' }"
                     >
                     </v-date-picker>
                   </div>
@@ -466,7 +469,8 @@
     <!-- custom -->
     <script src="assets/js/select2/select2.full.min.js"></script>
     <script src="assets/js/bootstrap-datepicker.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
+    <script src="assets/js/vue.js"></script>
     <script src="assets/js/vuex.js"></script>
     <script src='assets/js/v-calendar.umd.min.js'></script>
     <script src="assets/js/custom.js"></script>

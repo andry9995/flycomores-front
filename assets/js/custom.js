@@ -1055,7 +1055,7 @@ var _arr  = {};
 
 // Below code is not part of template
 $( document ).ready(function() {
-    // $('.select2').select2();
+    $('.select2').select2();
 
     var vuex = new Vuex.Store({
     state : {
@@ -1088,10 +1088,13 @@ $( document ).ready(function() {
         el: '#app',
         data: {
             date: null,
+            popover : {
+                visibility : 'click'
+            }
         },
         mounted() {
             let me = this;
-            vuex.commit('setDatesAvailable', [ null ]);
+            vuex.commit('setDatesAvailable', [  ]);
         },
         methods:{
             input: function () {
