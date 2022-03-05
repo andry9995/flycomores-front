@@ -26,6 +26,7 @@
     <!-- Responsive -->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/plugins//select2/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/datepicker.css" />
     <!-- Style customizer -->
     <link rel="stylesheet" type="text/css" href="#" data-style="styles"/>
   </head>
@@ -312,17 +313,36 @@
                     <div class="col-lg-12">
                       <div class="form-group">
                         <label class="float-left text-white" for="name">À</label>
-                        <select class="form-control select2">
+                        <select class="form-control select2" id="destination">
                           <option></option>
+                          <option value="1">Moroni</option>
                         </select>
                       </div>
                     </div>
                   </div>
+
+                  <div id="app">
+                    <v-date-picker
+                            mode="date"
+                            v-model="date"
+                            @input="input"
+                            :available-dates="datesDepartureAvailable" 
+                    >
+                    </v-date-picker>
+
+                    <v-date-picker
+                            @input="input"
+                            :available-dates="datesReturnAvailable" 
+                    >
+                    </v-date-picker>
+                  </div>
+
+
                   <div class="row">
                     <div class="col-lg-12">
                       <div class="form-group">
                         <label class="float-left text-white" for="name">DEPART</label>
-                        <input type="number" class="form-control" id="">
+                        <input type="text" class="form-control datepicker" id="">
                       </div>
                     </div>
                   </div>
@@ -330,7 +350,7 @@
                     <div class="col-lg-12">
                       <div class="form-group">
                         <label class="float-left text-white" for="name">RETOUR</label>
-                        <input type="number" class="form-control" id="">
+                        <input type="text" class="form-control datepicker" id="">
                       </div>
                     </div>
                   </div>
@@ -445,6 +465,10 @@
     <script src="assets/revolution/js/revolution-custom.js"></script> 
     <!-- custom -->
     <script src="assets/js/select2/select2.full.min.js"></script>
+    <script src="assets/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="assets/js/vuex.js"></script>
+    <script src='assets/js/v-calendar.umd.min.js'></script>
     <script src="assets/js/custom.js"></script>
   </body>
 </html>
