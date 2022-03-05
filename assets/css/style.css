@@ -2190,3 +2190,34 @@ img.bottom-img { top: 0; }
     padding: 10px;
     background: rgb(255 255 255 / 70%);
 }
+
+/* new style */
+
+select {
+  width: 100%;
+  border-radius: 0;
+  border: none;
+}
+
+.booking-box {
+  padding: 1rem 2rem;
+}
+
+.booking-box .form-group span {
+  margin: 0;
+}
+
+.booking-box .travel_type {
+  width: calc(100% - 10px);
+}
+.booking-box span.select2 {
+  width: 100%;
+}
+
+.select2-container--default .select2-selection--single {
+  border-radius: 0 !important;
+}
+
+label {
+  margin-bottom: .2rem;
+}
