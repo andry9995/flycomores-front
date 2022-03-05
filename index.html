@@ -297,7 +297,7 @@
               <option value="2">ALLER-RETOUR</option>
             </select>
             <div class="row form pb-60 xs-mt-20 pl-20 pr-20">
-              <div class="col-12">
+              <div class="col-12" id="app">
                 <form action="flights-result.html" method="get" class="d-block">
                   <div class="row">
                     <div class="col-lg-12 p-0">
@@ -321,28 +321,20 @@
                     </div>
                   </div>
 
-                  <div id="app">
-                    <v-date-picker
-                            mode="date"
-                            v-model="date"
-                            @input="input"
-                            :available-dates="datesDepartureAvailable" 
-                    >
-                    </v-date-picker>
-
-                    <v-date-picker
-                            @input="input"
-                            :available-dates="datesReturnAvailable" 
-                    >
-                    </v-date-picker>
-                  </div>
-
-
                   <div class="row">
                     <div class="col-lg-12 p-0">
                       <div class="form-group">
                         <label class="float-left text-white" for="name">DEPART</label>
-                        <input type="text" class="form-control datepicker" id="">
+                        <!-- <input type="text" class="form-control datepicker" id=""> -->
+                        <v-date-picker
+                            mode="date"
+                            v-model="date"
+                            @input="input"
+                            :available-dates="datesDepartureAvailable" 
+                            scrollable
+                            :popover="{ visibility: 'click' }"
+                        >
+                        </v-date-picker>
                       </div>
                     </div>
                   </div>
@@ -350,7 +342,13 @@
                     <div class="col-lg-12 p-0">
                       <div class="form-group">
                         <label class="float-left text-white" for="name">RETOUR</label>
-                        <input type="text" class="form-control datepicker" id="">
+                        <!-- <input type="text" class="form-control datepicker" id=""> -->
+                        <v-date-picker
+                            @input="input"
+                            :available-dates="datesReturnAvailable" 
+                            :popover="{ visibility: 'click' }"
+                        >
+                        </v-date-picker>
                       </div>
                     </div>
                   </div>
@@ -466,9 +464,11 @@
     <!-- custom -->
     <script src="assets/js/select2/select2.full.min.js"></script>
     <script src="assets/js/bootstrap-datepicker.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
+    <script src="assets/js/vue.js"></script>
     <script src="assets/js/vuex.js"></script>
     <script src='assets/js/v-calendar.umd.min.js'></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/booking-box.js"></script>
   </body>
 </html>
