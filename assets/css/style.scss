@@ -1,0 +1,28 @@
+select {
+    width: 100%;
+    border-radius: 0;
+    border: none;
+  }
+  
+.booking-box {
+    padding: 1rem 2rem;
+    .form-group {
+        span {
+            margin: 0;
+        }
+    }
+    .travel_type {
+        width: calc(100% - 10px);
+    }
+    span.select2 {
+        width: 100%;
+    }
+}
+  
+.select2-container--default .select2-selection--single {
+    border-radius: 0 !important;
+}
+
+label {
+    margin-bottom: .2rem;
+}
