@@ -10,8 +10,9 @@ select {
     width: 100%;
     border-radius: 0;
     border: none;
-  }
-  
+}
+
+
 .booking-box {
     background-color: #000000cc;
     padding: 1rem 2rem;
@@ -23,6 +24,7 @@ select {
     overflow-y: auto;
     h1 {
         font-size: 21px;
+        margin: 15px;
     }
     .form-group {
         span {
@@ -57,6 +59,48 @@ select {
 .booking-box.booking-form-mobile {
     width: 100%;
 }
+
+.booking-box.box-open {
+    transform: translateY(0);
+    transition: all 1s ease-in-out;
+    #booking-box-open-close {
+        i {
+            transform: rotate(180deg);
+            transition: all 1s ease-in-out;
+        }
+    }
+}
+
+.booking-box.box-close {
+    transform: translateY(calc(100% - 70px));
+    transition: all 1s ease-in-out;
+    #booking-box-open-close {
+        i {
+            transform: rotate(0deg);
+            transition: all 1s ease-in-out;
+        }
+    }
+}
+
+#booking-box-open-close {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: none;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    h1 {
+        margin: 0;
+    }
+    i {
+        font-size: 2rem;
+    }
+}
+
   
 .select2-container--default .select2-selection--single {
     border-radius: 0 !important;
@@ -85,10 +129,6 @@ button.button {
 .passengers_form {
     position: relative;
     .passengers-box {
-        position: absolute;
-        right: -100%;
-        bottom: -100%;
-        max-width: 300px;
         background-color: gray;
         border-radius: 5px;
         .row {
@@ -120,17 +160,6 @@ button.button {
                         }
                     }
                 }
-            }
-        }
-        button.close {
-            position: absolute;
-            top: 0;
-            color: white;
-            right: 8px;
-            text-shadow: none;
-            opacity: 1;
-            &:hover {
-                background-color: transparent;
             }
         }
     }

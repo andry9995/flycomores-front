@@ -25,6 +25,7 @@ select {
 
 .booking-box h1 {
   font-size: 21px;
+  margin: 15px;
 }
 
 .booking-box .form-group span {
@@ -64,6 +65,61 @@ select {
   width: 100%;
 }
 
+.booking-box.box-open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.booking-box.box-open #booking-box-open-close i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.booking-box.box-close {
+  -webkit-transform: translateY(calc(100% - 70px));
+          transform: translateY(calc(100% - 70px));
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.booking-box.box-close #booking-box-open-close i {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+#booking-box-open-close {
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  border: none;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+#booking-box-open-close h1 {
+  margin: 0;
+}
+
+#booking-box-open-close i {
+  font-size: 2rem;
+}
+
 .select2-container--default .select2-selection--single {
   border-radius: 0 !important;
 }
@@ -93,10 +149,6 @@ button.button {
 }
 
 .passengers_form .passengers-box {
-  position: absolute;
-  right: -100%;
-  bottom: -100%;
-  max-width: 300px;
   background-color: gray;
   border-radius: 5px;
 }
@@ -128,18 +180,5 @@ button.button {
   height: unset;
   font: normal normal normal 14px/1 FontAwesome;
   color: #fff;
-}
-
-.passengers_form .passengers-box button.close {
-  position: absolute;
-  top: 0;
-  color: white;
-  right: 8px;
-  text-shadow: none;
-  opacity: 1;
-}
-
-.passengers_form .passengers-box button.close:hover {
-  background-color: transparent;
 }
 /*# sourceMappingURL=style.css.map */
