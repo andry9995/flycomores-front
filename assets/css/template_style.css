@@ -2202,3 +2202,11 @@ img.bottom-img { top: 0; }
 #pre-loader img{
     width: 75px;
 }
+
+#booking-box-open-close {
+    color: #d53b23;
+}
+
+.booking-box h1 {
+    border-bottom: 2px solid #d53b23;
+}
