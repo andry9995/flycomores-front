@@ -1,0 +1,42 @@
+select {
+    width: 100%;
+    border-radius: 0;
+    border: none;
+  }
+  
+.booking-box {
+    padding: 1rem 2rem;
+    .form-group {
+        span {
+            margin: 0;
+            border-radius: 5px !important;
+            height: 40px;
+        }
+    }
+    .travel_type {
+        width: calc(100% - 10px);
+        border-radius: 5px;
+        height: 40px;
+        padding: 0 10px;
+        margin-bottom: 1rem;
+    }
+    span.select2 {
+        width: 100%;
+    }
+    .form-control {
+        border-radius: 5px !important;
+        background-color: #fff;
+    }
+}
+  
+.select2-container--default .select2-selection--single {
+    border-radius: 0 !important;
+}
+
+label {
+    margin-bottom: .2rem;
+}
+
+button.button {
+    border-radius: 5px;
+}
