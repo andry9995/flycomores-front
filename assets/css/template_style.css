@@ -2191,3 +2191,10 @@ img.bottom-img { top: 0; }
     background: rgb(255 255 255 / 70%);
 }
 
+.booking-box.box-close {
+  overflow-y: unset;
+}
+
+.booking-box.booking-form-mobile.box-open {
+  background-color: #323232;
+}
