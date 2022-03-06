@@ -356,12 +356,18 @@
                     <div class="col-lg-12 p-0">
                       <div class="form-group">
                         <label class="float-left text-white" for="name">RETOUR</label>
-                        <!-- <input type="text" class="form-control datepicker" id=""> -->
-                        <v-date-picker
-                            @input="input"
+                        <v-date-picker 
                             :available-dates="datesReturnAvailable" 
                             :popover="{ visibility: 'click' }"
                         >
+                          <template v-slot="{ inputValue, inputEvents }">
+                            <input
+                              :value="inputValue"
+                              v-on="inputEvents"
+                              disabled=""
+                              class="form-control"
+                            />
+                          </template>
                         </v-date-picker>
                       </div>
                     </div>

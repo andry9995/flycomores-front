@@ -102,6 +102,23 @@
 		event.preventDefault();
 
 		$('.passengers-box').addClass('d-none');
-	})
+	});
+
+	resize_ws();
+    
+    $(window).on('resize', function () {
+        resize_ws();
+    });
+
+    function resize_ws() {
+        var width = $( window ).width();
+        if (width <= 720) {
+        	$('.booking-box').addClass( 'booking-form-mobile' );
+        	$('.booking-box').removeClass( 'booking-form-desktop' );
+        } else {
+        	$('.booking-box').addClass( 'booking-form-desktop' )
+        	$('.booking-box').removeClass( 'booking-form-mobile' )
+        }
+    }
 
 })(jQuery);
