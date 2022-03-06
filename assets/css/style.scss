@@ -17,12 +17,12 @@ select {
     background-color: #000000cc;
     padding: 1rem 2rem;
     position: fixed;
-    z-index: 10000;
+    z-index: 1000;
     top: 90px;
     left: 0;
-    max-height: 100vh;
+    max-height: calc(100vh - 90px);
     overflow-y: auto;
-    min-height: calc(100vh - 90px);
+    height: 100%;
     h1 {
         font-size: 21px;
         margin: 15px;
