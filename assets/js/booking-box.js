@@ -121,4 +121,19 @@
         }
     }
 
+    $(document).on('click','#booking-box-open-close',function(event) {
+    	event.preventDefault();
+
+    	var open = $('.booking-box').hasClass('box-open');
+
+    	if (open) {
+    		$('.booking-box').addClass('box-close');
+    		$('.booking-box').removeClass('box-open');
+    	} else {
+    		$('.booking-box').addClass('box-open');
+    		$('.booking-box').removeClass('box-close');
+    	}
+
+    })
+
 })(jQuery);
