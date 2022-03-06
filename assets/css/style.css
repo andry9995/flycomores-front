@@ -1,3 +1,11 @@
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+* {
+  scrollbar-width: none;
+}
+
 select {
   width: 100%;
   border-radius: 0;
@@ -5,7 +13,14 @@ select {
 }
 
 .booking-box {
+  background-color: #000000cc;
   padding: 1rem 2rem;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 .booking-box h1 {
@@ -21,6 +36,10 @@ select {
 .booking-box .form-group span.vc-popover-caret {
   border-radius: 0 !important;
   height: 12px;
+}
+
+.booking-box .form-group span.select2 {
+  width: 100% !important;
 }
 
 .booking-box .travel_type {
@@ -39,6 +58,10 @@ select {
 .booking-box .form-control {
   border-radius: 5px !important;
   background-color: #fff;
+}
+
+.booking-box.booking-form-mobile {
+  width: 100%;
 }
 
 .select2-container--default .select2-selection--single {
