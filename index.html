@@ -303,8 +303,15 @@
                     <div class="col-lg-12 p-0">
                       <div class="form-group">
                         <label class="float-left text-white" for="name">DE</label>
-                        <select class="form-control select2">
+                        <select 
+                          id="departure"
+                          class="form-control select2" 
+                          v-model="departure"
+                          v-on:change="departureChange()"
+                        >
                           <option></option>
+                          <option value="1">Moroni</option>
+                          <option value="1">Moheli</option>
                         </select>
                       </div>
                     </div>
@@ -313,9 +320,15 @@
                     <div class="col-lg-12 p-0">
                       <div class="form-group">
                         <label class="float-left text-white" for="name">À</label>
-                        <select class="form-control select2" id="destination">
+                        <select 
+                          id="destination" 
+                          class="form-control select2" 
+                          v-model="destination"
+                        >
                           <option></option>
-                          <option value="1">Moroni</option>
+                          <option v-for="destination in destinations" :value="destination.value">
+                            {{destination.value}}
+                          </option>
                         </select>
                       </div>
                     </div>
@@ -356,10 +369,20 @@
                     <div class="col-lg-12 p-0">
                       <div class="form-group">
                         <label class="float-left text-white" for="name">PASSAGERS</label>
-                        <input type="number" class="form-control" id="">
+                        <input 
+                          type="number" 
+                          class="form-control" 
+                          id="passengers"
+                          readonly="" 
+                          value="1" 
+                        >
                       </div>
                     </div>
                   </div>
+
+
+                  
+
                   <div class="row">
                     <div class="col-lg-12 p-0">
                       <button class="button btn-block" type="submit"> 
@@ -376,6 +399,80 @@
           </div>
         </div>
       </div>
+
+      <div class="passengers-box d-none">
+          <div class="row">
+            <div class="col-lg-12 p-0">
+              <div class="form-group">
+                <label class="float-left text-white" for="name">ADULTES</label>
+                <!-- <input type="number" class="form-control" id=""> -->
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-warning btn-number" data-type="minus" data-field="passengers-adults" disabled="disabled">
+                            <span class="fa fa-minus"></span>
+                        </button>
+                    </span>
+                    <input type="text" name="passengers-adults" class="form-control input-number" value="1" min="0" max="100" readonly="">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-warning btn-number" data-type="plus" data-field="passengers-adults">
+                            <span class="fa fa-plus"></span>
+                        </button>
+                    </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 p-0">
+              <div class="form-group">
+                <label class="float-left text-white" for="name">ENFANTS</label>
+                <!-- <input type="number" class="form-control" id=""> -->
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-warning btn-number" data-type="minus" data-field="passengers-childs" disabled="disabled">
+                            <span class="fa fa-minus"></span>
+                        </button>
+                    </span>
+                    <input type="text" name="passengers-childs" class="form-control input-number" value="0" min="0" max="100" readonly="">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-warning btn-number" data-type="plus" data-field="passengers-childs">
+                            <span class="fa fa-plus"></span>
+                        </button>
+                    </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 p-0">
+              <div class="form-group">
+                <label class="float-left text-white" for="name">BÉBÉS</label>
+                <!-- <input type="number" class="form-control" id=""> -->
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-warning btn-number" data-type="minus" data-field="passengers-babies" disabled="disabled">
+                            <span class="fa fa-minus"></span>
+                        </button>
+                    </span>
+                    <input type="text" name="passengers-babies" class="form-control input-number" value="0" min="0" max="100" readonly="">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-warning btn-number" data-type="plus" data-field="passengers-babies">
+                            <span class="fa fa-plus"></span>
+                        </button>
+                    </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12 p-0">
+              <button class="btn btn-danger" id="close-passengers-box">
+                <i class="fa fa-times"></i>
+              </button>
+            </div>
+          </div>
+        </div>
       <section class="page-section-ptb theme-bg">
         <div class="container">
           <div class="row">

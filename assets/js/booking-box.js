@@ -3,6 +3,7 @@
 	    state : {
 	        datesAvailable  : [ null ],
 	        datesReturnAvailable  : [ null ],
+	        destinations : []
 	    },
 	    mutations : {
 	        setDatesAvailable (state,payload) {
@@ -10,6 +11,9 @@
 	        },
 	        setDatesReturnAvailable (state,payload) {
 	            state.datesReturnAvailable = payload;
+	        },
+	        setDestinations (state,payload) {
+	            state.destinations = payload;
 	        }
 	    },
 	    getters : {
@@ -18,6 +22,9 @@
 	        },
 	        getDatesReturnAvailable(state) {
 	            return state.datesReturnAvailable;
+	        },
+	        getDestinations(state){
+	            return state.destinations;
 	        }
 	    },
 	    actions : {
@@ -32,17 +39,22 @@
 	        date: null,
 	        popover : {
 	            visibility : 'click'
-	        }
+	        },
+	        departure : 0,
+	        destination : 0,
 	    },
 	    mounted() {
 	        $('.select2').select2();
 	        let me = this;
-	        vuex.commit('setDatesAvailable', [  ]);
+	        // vuex.commit('setDatesAvailable', [  ]);
 	    },
 	    methods:{
 	        input: function () {
 	            let me = $(this.$refs.el);
 	            vuex.commit('setDatesReturnAvailable', [ this.date ]);
+	        },
+	        departureChange: function() {
+	        	console.log('The new value is: ')
 	        }
 	    },
 	    computed : {
@@ -51,7 +63,45 @@
 	        },
 	        datesReturnAvailable(){
 	            return vuex.getters.getDatesReturnAvailable;
+	        },
+	        destinations(){
+	            return vuex.getters.getDestinations;
 	        }
 	    }
 	});
+
+	$(document).on('change','#departure',function(event) {
+		event.preventDefault();
+
+		values = [
+			{
+				id : 1,
+				value : 'Majunga'
+			}
+		];
+
+        vuex.commit('setDestinations', values );
+
+	});
+
+	$(document).on('change','#destination',function(event) {
+		event.preventDefault();
+
+        vuex.commit('setDatesAvailable', [  ]);
+
+
+	});
+
+	$(document).on('click','#passengers',function(event) {
+		event.preventDefault();
+
+		$('.passengers-box').removeClass('d-none');
+	});
+
+	$(document).on('click','#close-passengers-box',function(event) {
+		event.preventDefault();
+
+		$('.passengers-box').addClass('d-none');
+	})
+
 })(jQuery);
