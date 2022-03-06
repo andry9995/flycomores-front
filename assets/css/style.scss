@@ -75,14 +75,41 @@ button.button {
                 display: flex;
                 flex-direction: column;
                 .input-group {
+                    input {
+                        border-radius: 0 !important;
+                        height: 38px;
+                    }
                     .input-group-btn {
+                        &:first-of-type {
+                            button {
+                                border-radius: 5px 0px 0px 5px;
+                            }
+                        }
+                        &:last-of-type {
+                            button {
+                                border-radius: 0px 5px 5px 0px;
+                            }
+                        }
                         button {
                             span {
                                 height: unset;
+                                font: normal normal normal 14px/1 FontAwesome;
+                                color: #fff;
                             }
                         }
                     }
                 }
+            }
+        }
+        button.close {
+            position: absolute;
+            top: 0;
+            color: white;
+            right: 8px;
+            text-shadow: none;
+            opacity: 1;
+            &:hover {
+                background-color: transparent;
             }
         }
     }

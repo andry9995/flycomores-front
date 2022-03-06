@@ -98,7 +98,7 @@
 		$('.passengers-box').removeClass('d-none');
 	});
 
-	$(document).on('click','#close-passengers-box',function(event) {
+	$(document).on('click','.close-passengers-box',function(event) {
 		event.preventDefault();
 
 		$('.passengers-box').addClass('d-none');

@@ -88,7 +88,35 @@ button.button {
           flex-direction: column;
 }
 
+.passengers_form .passengers-box .row .form-group .input-group input {
+  border-radius: 0 !important;
+  height: 38px;
+}
+
+.passengers_form .passengers-box .row .form-group .input-group .input-group-btn:first-of-type button {
+  border-radius: 5px 0px 0px 5px;
+}
+
+.passengers_form .passengers-box .row .form-group .input-group .input-group-btn:last-of-type button {
+  border-radius: 0px 5px 5px 0px;
+}
+
 .passengers_form .passengers-box .row .form-group .input-group .input-group-btn button span {
   height: unset;
+  font: normal normal normal 14px/1 FontAwesome;
+  color: #fff;
+}
+
+.passengers_form .passengers-box button.close {
+  position: absolute;
+  top: 0;
+  color: white;
+  right: 8px;
+  text-shadow: none;
+  opacity: 1;
+}
+
+.passengers_form .passengers-box button.close:hover {
+  background-color: transparent;
 }
 /*# sourceMappingURL=style.css.map */
