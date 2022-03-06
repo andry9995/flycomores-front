@@ -6,19 +6,27 @@ select {
   
 .booking-box {
     padding: 1rem 2rem;
+    h1 {
+        font-size: 21px;
+    }
     .form-group {
         span {
             margin: 0;
             border-radius: 5px !important;
             height: 40px;
         }
+        span.vc-popover-caret {
+            border-radius: 0 !important;
+            height: 12px;
+        }
     }
     .travel_type {
         width: calc(100% - 10px);
         border-radius: 5px;
         height: 40px;
-        padding: 0 10px;
+        padding: 0 5px;
         margin-bottom: 1rem;
+        background-color: #fff;
     }
     span.select2 {
         width: 100%;
@@ -39,4 +47,43 @@ label {
 
 button.button {
     border-radius: 5px;
+}
+
+.select2-selection__rendered {
+    text-align: left;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 36px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 6px !important;
+}
+
+.passengers_form {
+    position: relative;
+    .passengers-box {
+        position: absolute;
+        right: -100%;
+        bottom: -100%;
+        max-width: 300px;
+        background-color: gray;
+        border-radius: 5px;
+        .row {
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                .input-group {
+                    .input-group-btn {
+                        button {
+                            span {
+                                height: unset;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
