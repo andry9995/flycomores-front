@@ -146,7 +146,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 .mega-menu .menu-logo img { height: 40px; }
 .mega-menu .drop-down-multilevel.right-menu { right: 0px;  }
 .mega-menu > section.menu-list-items { padding: 0; }
-.mega-menu .menu-links > li > a { text-transform: uppercase; font-size: 14px; font-weight: 500; line-height: 20px; }
+.mega-menu .menu-links > li > a { text-transform: uppercase; font-size: 12px; font-weight: 500; line-height: 20px; }
 .mega-menu .menu-links > li.active .drop-down-multilevel a { color: #555555; }
 .mega-menu .menu-links > li.active .drop-down-multilevel a:hover { color: #84ba3f; }
 .mega-menu .menu-links > li.active .drop-down a { color: #323232; }
@@ -2197,4 +2197,8 @@ img.bottom-img { top: 0; }
 
 .booking-box.booking-form-mobile.box-open {
   background-color: #323232;
+}
+
+#pre-loader img{
+    width: 75px;
 }
