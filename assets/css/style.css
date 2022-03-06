@@ -182,4 +182,8 @@ button.button {
   font: normal normal normal 14px/1 FontAwesome;
   color: #fff;
 }
+
+.booking-box.box-close {
+  overflow-y: unset;
+}
 /*# sourceMappingURL=style.css.map */
