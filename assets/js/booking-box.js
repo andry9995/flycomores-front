@@ -104,34 +104,41 @@
 		$('.passengers-box').addClass('d-none');
 	});
 
-	resize_ws();
+	resize_booking_box();
     
     $(window).on('resize', function () {
-        resize_ws();
+        resize_booking_box();
     });
 
-    function resize_ws() {
+    function resize_booking_box() {
         var width = $( window ).width();
+        var booking = $('.booking-box');
+
         if (width <= 720) {
-        	$('.booking-box').addClass( 'booking-form-mobile' );
-        	$('.booking-box').removeClass( 'booking-form-desktop' );
+        	booking.addClass( 'booking-form-mobile' );
+        	booking.addClass('box-close');
+        	booking.removeClass('booking-form-desktop');
+        	booking.removeClass('box-open');
         } else {
-        	$('.booking-box').addClass( 'booking-form-desktop' )
-        	$('.booking-box').removeClass( 'booking-form-mobile' )
+        	booking.addClass('booking-form-desktop')
+        	booking.addClass('box-open')
+        	booking.removeClass('booking-form-mobile')
+        	booking.removeClass('box-close')
         }
     }
 
     $(document).on('click','#booking-box-open-close',function(event) {
     	event.preventDefault();
 
-    	var open = $('.booking-box').hasClass('box-open');
+        var booking = $('.booking-box');
+    	var open = booking.hasClass('box-open');
 
     	if (open) {
-    		$('.booking-box').addClass('box-close');
-    		$('.booking-box').removeClass('box-open');
+    		booking.addClass('box-close');
+    		booking.removeClass('box-open');
     	} else {
-    		$('.booking-box').addClass('box-open');
-    		$('.booking-box').removeClass('box-close');
+    		booking.addClass('box-open');
+    		booking.removeClass('box-close');
     	}
 
     })
