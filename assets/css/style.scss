@@ -165,3 +165,52 @@ button.button {
         }
     }
 }
+
+
+.flight_schedule_row {
+    border: 1px solid #000;
+    .flight_schedule {
+        display: flex;
+        column-gap: 1rem;
+        .flight_start,
+        .flight_end {
+            display: flex;
+            flex-direction: column;
+            span {
+                display: block ruby;
+            }
+        }
+        .travel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            hr {
+                border-top: 1px solid #000;
+                width: 100%;
+                position: relative;
+                &::before {
+                    content: '';
+                    width: 10px;
+                    height: .5px;
+                    background-color: #000;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    display: block;
+                    right: 0;
+                    top: -5px;
+                }
+                &::after {
+                    content: '';
+                    width: 10px;
+                    height: .5px;
+                    background-color: #000;
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    display: block;
+                    right: 0;
+                    bottom: -3.5px;
+                }
+            }
+        }
+    }
+}

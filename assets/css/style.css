@@ -182,4 +182,77 @@ button.button {
   font: normal normal normal 14px/1 FontAwesome;
   color: #fff;
 }
+
+.flight_schedule_row {
+  border: 1px solid #000;
+}
+
+.flight_schedule_row .flight_schedule {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+}
+
+.flight_schedule_row .flight_schedule .flight_start,
+.flight_schedule_row .flight_schedule .flight_end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flight_schedule_row .flight_schedule .flight_start span,
+.flight_schedule_row .flight_schedule .flight_end span {
+  display: block ruby;
+}
+
+.flight_schedule_row .flight_schedule .travel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flight_schedule_row .flight_schedule .travel hr {
+  border-top: 1px solid #000;
+  width: 100%;
+  position: relative;
+}
+
+.flight_schedule_row .flight_schedule .travel hr::before {
+  content: '';
+  width: 10px;
+  height: .5px;
+  background-color: #000;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  display: block;
+  right: 0;
+  top: -5px;
+}
+
+.flight_schedule_row .flight_schedule .travel hr::after {
+  content: '';
+  width: 10px;
+  height: .5px;
+  background-color: #000;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  position: absolute;
+  display: block;
+  right: 0;
+  bottom: -3.5px;
+}
 /*# sourceMappingURL=style.css.map */
